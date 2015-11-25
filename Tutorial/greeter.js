@@ -1,8 +1,36 @@
 //function greeter (person) {
 //        return "Hello, " + person
 //}
+//var user  = "Jane User";
+//document.body.innerHTML = greeter(user);
+//Using Type Annotation simple test
+//function greeter (person: string) {
+//	return "Hello, " + person
+//}
+//var user  = [1,2,3];
+//document.body.innerHTML = greeter(user);
+//interface Person {
+//	firstname: string;
+//	lastname: string;
+//}
+//function greeter (person: Person)
+//{
+// 	return "Hello, " + person.firstname + " " + person.lastname;
+//}
+//var user = {firstname: "Jane", lastname: "User"};
+//document.body.innerHTML = greeter(user);
+//Using classes
+var Student = (function () {
+    function Student(firstname, middleinitial, lastname) {
+        this.firstname = firstname;
+        this.middleinitial = middleinitial;
+        this.lastname = lastname;
+        this.fullname = firstname + " " + middleinitial + " " + lastname;
+    }
+    return Student;
+})();
 function greeter(person) {
     return "Hello, " + person.firstname + " " + person.lastname;
 }
-var user = { firstname: "Jane", lastname: "User" };
+var user = new Student("Jane", "M", "User");
 document.body.innerHTML = greeter(user);
