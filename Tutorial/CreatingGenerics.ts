@@ -54,9 +54,28 @@ interface LengthWise {
 }
 
 function logginIdentity<T extends LengthWise>(arg: T): T {
-	console.log(arg.length); //New we know it has a .length property, so no more error
+	console.log(arg.length); //Now we know it has a .length property, so no more error
 	return arg;
 }
+//Note: To set constaints extending an interface with constraints set as properties is an option since it allows you to reference a property that will otherwise not be present in the generic type T like in the above example.
+
+//Example
+logginIdentity(3); //This gives an error because the parameter doesn't have the length property.
+
+logginIdentity({length: 10, value: 3}); //This one doesn't give an error because the parameter does have the length property
+ 
+//Using Type Parameters in Generic Constraints
+
+
+
+
+
+
+
+
+
+
+
 
 
 
