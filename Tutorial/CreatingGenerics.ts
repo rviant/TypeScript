@@ -10,7 +10,7 @@ var myOtherIdentity: <U>(arg: U)=>U = identity;
 var mySecondtherIdentity: {<T>(arg: T): T} = identity;
 
 //Generic Interface
-interface GenericIdentityFn {
+interface GenericIdnetityFn {
 	<T>(arg: T): T; 
 }
 
